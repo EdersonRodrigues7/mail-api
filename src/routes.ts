@@ -4,6 +4,11 @@ import { BudgetController } from './controllers/budget-controller';
 
 export const routes = express.Router();
 
+
+routes.get('/', (req, res) => {
+    return "Welcome to Mail API";
+});
+
 routes.post('/request-budget', async (req, res) => {
     try {
         const nodemailerMailAdapter = new NodemailerMailAdapter();
